@@ -2,7 +2,7 @@
 
 # Author: <Hunter Steele>
 # Date: <11/20/25>
-# version: 1.2
+# version: 1.3
 
 size = input("Would you like a small or large pizza? (small or large) ").lower() # determine the size of the pizza, .lower() for case insensitivity per ChatGPT suggestion
 toppings = float(input("What toppings would you like? (toppings are $1 each, half toppings are 0.5 each)")) # use float to allow for half toppings
@@ -27,6 +27,7 @@ if del_distance >= 30:
     exit()
 elif del_distance == 0:
     print("Your order has been marked for pickup only!")
+    del_cost = -2
     order = "pickup"
 elif del_distance <= 5:
     del_cost = 2
@@ -54,6 +55,10 @@ elif order == "delivery":
 
 '''
 <used chat GPT for minor suggestions such as:
-    removing multiplications by 1 for tappings and delivery distance,
-    adding "exit()" after invalid inputs or canelled orders to prevent a potential continuation of the program to error out
+    removing multiplications by 1 for toppings and delivery distance,
+    adding "exit()" after invalid inputs or canelled orders to prevent a potential continuation of the program to error out>
+'''
+
+'''
+<revised after comment from professor, check github commentary>
 '''
